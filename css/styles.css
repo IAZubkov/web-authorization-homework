@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url("../fonts/Nunitoregular.woff") format("woff");
+    src: url("../fonts/Nunitoregular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url("../fonts/Nunitobold.woff") format("woff");
+    src: url("../fonts/Nunitobold.woff2") format("woff2");
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(to right, #FFFFFF 50%, #F8F8FA 50%);
+}
+
+header {
+    text-align: center;
+    margin-right: 8px;
+    padding-top: 27px;
+    margin-bottom: 112px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 96px;
+    margin: 0 auto 144px auto;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 452px;
+}
+
+.form-section h1 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.form-section p {
+    font-size: 22px;
+    color: #636363;
+    margin-bottom: 42px;
+}
+
+.form-input {
+    border-color: transparent;
+    border-bottom: 1px solid gray;
+    width: 452px;
+    height: 60px;
+}
+
+.form-input::placeholder {
+    font-size: 16px;
+    color: #C6C6C4;
+    padding: 20px 4px 4px 4px;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 40px 0;
+    font-size: 16px;
+    color: #636363;
+}
+
+.button {
+    background-color: #DD3142;
+    width: 210px;
+    height: 70px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.question {
+    display: block;
+    font-size: 16px;
+    color: #636363;
+    margin-top: 44px;
+    text-align: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #FFFFFF;
+    padding: 40px 32px;
+    border-radius: 8px;
+    max-width: 452px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: #636363;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.modal-button {
+    margin: 0 auto;
+}
+
+.form-input.input-error {
+    border-bottom-color: #DD3142;
+}
+
+#agree.input-error {
+    outline: 2px solid #DD3142;
+    outline-offset: 2px;
+}
+
+.field-error {
+    display: block;
+    font-size: 14px;
+    color: #DD3142;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
