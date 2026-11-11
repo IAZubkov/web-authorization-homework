@@ -266,6 +266,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         isLoginPage = true;
 
+        textFields.forEach(function (field) {
+            clearFieldError(field);
+        });
+        clearFieldError(agreeCheckbox);
+
         pageTitle.textContent = 'Log in to the system';
         fullNameGroup.remove();
         emailGroup.remove();
@@ -339,6 +344,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         switchToAccountPage(user);
     }
+
+    document.querySelectorAll('.password-toggle').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const input = button.parentElement.querySelector('.form-input');
+            const showPassword = input.type === 'password';
+
+            input.type = showPassword ? 'text' : 'password';
+            button.classList.toggle('is-visible', showPassword);
+            button.setAttribute(
+                'aria-label',
+                showPassword ? 'Скрыть пароль' : 'Показать пароль'
+            );
+        });
+    });
 
     signUpButton.addEventListener('click', signUp);
 

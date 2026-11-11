@@ -54,16 +54,62 @@ header {
 }
 
 .form-input {
+    box-sizing: border-box;
     border-color: transparent;
     border-bottom: 1px solid gray;
     width: 452px;
     height: 60px;
+    outline: none;
+}
+
+.form-input:focus,
+.form-input:focus-visible {
+    outline: none;
 }
 
 .form-input::placeholder {
     font-size: 16px;
     color: #C6C6C4;
     padding: 20px 4px 4px 4px;
+}
+
+.password-wrap {
+    position: relative;
+    display: block;
+    width: 452px;
+}
+
+.password-wrap .form-input {
+    padding-right: 44px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #636363;
+    cursor: pointer;
+}
+
+.password-toggle .icon-eye-off {
+    display: none;
+}
+
+.password-toggle.is-visible .icon-eye {
+    display: none;
+}
+
+.password-toggle.is-visible .icon-eye-off {
+    display: block;
 }
 
 .check-box {
